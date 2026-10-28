@@ -55,7 +55,7 @@ export const EXPORT_PRESETS: readonly ExportPreset[] = [
   { id: 'douyin', name: '抖音', group: 'vertical', frame: '9:16', shortEdge: 1080, fps: 30, burnSubtitles: true, china: true },
   { id: 'kuaishou', name: '快手', group: 'vertical', frame: '9:16', shortEdge: 1080, fps: 30, burnSubtitles: true, china: true },
   { id: 'channels', name: '视频号', group: 'vertical', frame: '9:16', shortEdge: 1080, fps: 30, burnSubtitles: true, china: true },
-  { id: 'xiaohongshu', name: '小红书', group: 'feed', frame: '3:4', shortEdge: 1080, fps: 30, burnSubtitles: true, china: true },
+  { id: 'xiaohongshu', name: '小红书', group: 'vertical', frame: '9:16', shortEdge: 1080, fps: 30, burnSubtitles: true, china: true },
   { id: 'youtube', name: 'YouTube', group: 'landscape', frame: '16:9', shortEdge: 1080, fps: 60, burnSubtitles: false },
   { id: 'youtube-4k', name: 'YouTube 4K', group: 'landscape', frame: '16:9', shortEdge: 2160, fps: 60, burnSubtitles: false },
   { id: 'x', name: 'X', group: 'landscape', frame: '16:9', shortEdge: 1080, fps: 30, burnSubtitles: true, maxDurationSec: 140 },

@@ -76,7 +76,7 @@ test('platforms: China\'s first in Chinese, none of them in any other language',
     assert.ok(!exportPresetsFor(language).some((p) => p.china), language);
   }
   const xhs = exportPresetsFor('zh-CN').find((p) => p.id === 'xiaohongshu');
-  assert.deepEqual(exportFramedDims({ w: 1920, h: 1080 }, xhs.frame, 'contain', xhs.shortEdge), { w: 1080, h: 1440 });
+  assert.deepEqual(exportFramedDims({ w: 1920, h: 1080 }, xhs.frame, 'contain', xhs.shortEdge), { w: 1080, h: 1920 });
 });
 
 test('a platform gets the film\'s own frames a second, up to the most it shows', () => {
