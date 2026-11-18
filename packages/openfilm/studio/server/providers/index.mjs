@@ -2,9 +2,9 @@
 /**
  * Which provider serves each verb of `openfilm get`, and the API of Studio's Settings → Providers and Models.
  *
- * A person's own key for ElevenLabs, OpenAI, Google (the Gemini API), fal.ai, Groq, Azure Speech, Pexels, Pixabay,
- * Brave Search or Tavily pays that service directly for what it can do. Each makes a kind of media with the model the person chose for
- * it (the provider's first unless they did).
+ * A person's own key for ElevenLabs, OpenAI, Google (the Gemini API), fal.ai, Groq, Azure Speech, Alibaba Cloud Bailian,
+ * Pexels, Pixabay, Brave Search or Tavily pays that service directly for what it can do. Each makes a kind of media with
+ * the model the person chose for it (the provider's first unless they did).
  * Who serves a verb: `--via <provider>` on the command, else the person's choice for that kind of media in Settings (`use`),
  * while it can; else nothing does. Every provider is treated alike: a kind with no choice goes to the first provider,
  * by name, that is connected and makes it (when one is connected, and when the one it had goes), and a choice the
@@ -26,6 +26,7 @@ import tavily from './tavily.mjs';
 import groq from './groq.mjs';
 import azure from './azure.mjs';
 import doubao from './doubao.mjs';
+import bailian from './bailian.mjs';
 
 /**
  * @typedef {import('./contract.mjs').Provider} Provider @typedef {import('./contract.mjs').Verb} Verb
@@ -34,7 +35,7 @@ import doubao from './doubao.mjs';
  */
 
 /** The providers paid with the person's own key. */
-const OWN = [elevenlabs, openai, google, fal, pexels, pixabay, brave, tavily, groq, azure, doubao];
+const OWN = [elevenlabs, openai, google, fal, pexels, pixabay, brave, tavily, groq, azure, doubao, bailian];
 
 /** The kinds of media the person chooses a provider and model for (Settings → Services). */
 const USE_VERBS = /** @type {Verb[]} */ (['tts', 'music', 'sfx', 'asr', 'image', 'image-search', 'video', 'translate', 'web-search']);
